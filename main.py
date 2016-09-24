@@ -10,7 +10,7 @@ from sklearn.externals.six import StringIO
 import pydot
 from IPython.display import Image
 
-input_file = "/Users/luthermartin-pers/Documents/ML Assignment #1/creditcard_default.csv"
+input_file = "./creditcard_default.csv"
 #f = open("/Users/luthermartin-pers/Desktop/creditcard_default.txt")
 df = pandas.read_csv(input_file)
 #f.readline()   skip the header
@@ -30,8 +30,8 @@ clf = tree.DecisionTreeClassifier()
 clf = clf.fit(X,Y)
 clf_test = clf.predict(Xt)
 
-tree.export_graphviz(clf, out_file=dot_data, filled=True, rounded=True,
-                    special_characters=True)
-graph = pydot.graph_from_dot_data(dot_data.getvalue())
-print(graph)
-Image(graph.create_png())
+#tree.export_graphviz(clf, out_file=dot_data, filled=True, rounded=True,
+#                    special_characters=True)
+#graph = pydot.graph_from_dot_data(dot_data.getvalue())
+#print(graph)
+#Image(graph.create_png())
